@@ -4,7 +4,7 @@ from google.oauth2.service_account import Credentials
 import google.generativeai as genai
 import json
 
-# 1. Page Config sab se upar hona chahiye bahi
+# 1. Page Config
 st.set_page_config(
     page_title="AI Store - Intelligent Assistant",
     page_icon="🤖",
@@ -22,7 +22,8 @@ hide_style = """
     button[title="View source code"] {visibility: hidden !important;}
     </style>
 """
-st.markdown(hide_style, unsafe_allow_code=True)
+# 🔥 REHAN BHAI: Yahan unsafe_allow_html=True bilkul sahi fit kar diya hai!
+st.markdown(hide_style, unsafe_allow_html=True)
 
 # 3. Google Sheets Aur Gemini Config Setup
 scope = [
@@ -53,8 +54,8 @@ if "sheet_saved" not in st.session_state:
     st.session_state.sheet_saved = False
 
 # UI Headers
-st.markdown("<h1 style='text-align: center; color: #1E3A8A;'>🤖 AI Store Assistant</h1>", unsafe_allow_code=True)
-st.markdown("<p style='text-align: center; color: #555555;'>Baatoan baatoan mein order book karne wala bot bahi</p>", unsafe_allow_code=True)
+st.markdown("<h1 style='text-align: center; color: #1E3A8A;'>🤖 AI Store Assistant</h1>", unsafe_allow_code=False) # standard protection
+st.markdown("<h3 style='text-align: center; color: #555555;'>Baatoan baatoan mein order book karne wala bot bahi</h3>", unsafe_allow_html=True)
 st.write("---")
 
 # Old Messages Display
