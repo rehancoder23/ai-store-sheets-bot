@@ -22,7 +22,6 @@ hide_style = """
     button[title="View source code"] {visibility: hidden !important;}
     </style>
 """
-# 🔥 REHAN BHAI: Yahan unsafe_allow_html=True bilkul sahi fit kar diya hai!
 st.markdown(hide_style, unsafe_allow_html=True)
 
 # 3. Google Sheets Aur Gemini Config Setup
@@ -53,8 +52,8 @@ if "customer_data" not in st.session_state:
 if "sheet_saved" not in st.session_state:
     st.session_state.sheet_saved = False
 
-# UI Headers
-st.markdown("<h1 style='text-align: center; color: #1E3A8A;'>🤖 AI Store Assistant</h1>", unsafe_allow_code=False) # standard protection
+# 🔥 REHAN BHAI: Yahan se maine saari confusion khatam kar di hai! Saaf HTML text hai ab.
+st.markdown("<h1 style='text-align: center; color: #1E3A8A;'>🤖 AI Store Assistant</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: #555555;'>Baatoan baatoan mein order book karne wala bot bahi</h3>", unsafe_allow_html=True)
 st.write("---")
 
